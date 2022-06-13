@@ -23,7 +23,7 @@ function NavBarRoutes() {
             <Route path = "/watch-later" element={<WatchLater/>}/>
             <Route path = "/playlist" element={<Playlist/>}/>
             <Route path = "/history" element={<History/>}/>
-            <Route path = "/video-player" element={<VideoPlayer/>}/>
+            <Route path = "/video" element={<VideoPlayer/>}/>
         </Route>
 
         <Route path = "/mockman-api" element={<MockAPI/>}/>
