@@ -3,24 +3,18 @@ import '../../Utilities/CSS/Utilities.css'
 import Filter from '../../Components/Filter/filter'
 import {useDataContext} from '../../Context/dataContext'
 import VideoCard from '../../Components/Video Card/video-card'
+import { filteredCategoryData, filterBySearch } from '../../Utilities/JS/filterFunctions'
 
 function Home() {
-  const {data:{videoData, selectedCategory}} = useDataContext()
+  const {data:{videoData, selectedCategory, searchFor}} = useDataContext()
 
-  const filteredData = () =>{ 
-      if(selectedCategory === 'All'){
-        return videoData
-      }else{
-        return videoData.filter(video => selectedCategory === video.categoryName)
-      }
-    }
+  const filteredData = filterBySearch(filteredCategoryData(videoData, selectedCategory), searchFor)
 
-console.log(filteredData())
   return (
     <section className="video-list--container main__body">
       <Filter/>
       <section className='video-list--section'>
-        {filteredData().map(video => <VideoCard video={video}/>)}
+        {filteredData.map(video => <VideoCard video={video}/>)}
       </section>
     </section>
   )

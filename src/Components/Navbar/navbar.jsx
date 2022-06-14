@@ -28,7 +28,7 @@ function Navbar() {
             <div className=" logo ">
                 <Link to="/home" className="anchor-style--none">
                     <span className="logo--title logo--title-black ">view<span className="dot ">tube</span>
-                    <img src="https://github.com/sanathkumar26700/moview__EcomStore--ui/blob/development/images/Compact_disc.svg.png?raw=true" alt=" noter--logo" className="logo--img img-responsive"/>
+                    <img src="https://github.com/sanathkumar26700/moview__EcomStore--ui/blob/development/images/logo--eye.png?raw=true" alt=" noter--logo" className="logo--img img-responsive"/>
                     </span>
                 </Link>
             </div>
@@ -41,7 +41,7 @@ function Navbar() {
                     id="search--bar"
                     value = {searchFor}
                     onChange={(e) =>{
-                        navigate("/notes")
+                        navigate("/home")
                         dataDispatch({type : "SEARCH", payload : e.target.value})}}
                     /> 
                     <label htmlFor="search--bar">
