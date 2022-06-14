@@ -1,0 +1,11 @@
+.video-list--container {
+  display: grid;
+  grid-template-rows: 8rem 1fr;
+}
+
+.video-list--section {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 30rem));
+  grid-gap: 1.5rem;
+}
