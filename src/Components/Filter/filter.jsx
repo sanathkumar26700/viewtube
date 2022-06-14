@@ -1,4 +1,3 @@
-import React from 'react';
 import {useDataContext} from '../../Context/dataContext'
 import './filter.css';
 

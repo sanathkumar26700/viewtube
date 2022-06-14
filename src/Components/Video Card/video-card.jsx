@@ -1,6 +1,4 @@
-import { useState, useEffect } from 'react';
-import { useNavigate, useLocation, Link } from "react-router-dom";
-import {useAuth} from '../../Context/authContext'
+import { Link } from "react-router-dom";
 
 import './video-card.css'
 
