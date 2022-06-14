@@ -1,0 +1,45 @@
+:root {
+  --primary-color: #e67f10d2;
+  --primary-color-dark: #7a3b04;
+  --primary-color-light: #f6ad5f;
+}
+
+.category--input {
+  display: flex;
+  flex-shrink: 0;
+  background: none;
+  width: fit-content;
+  border: 2px solid var(--foreground-color);
+  color: var(--foreground-color);
+  border-radius: 1.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.category--input:hover {
+  border-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.active {
+  background-color: var(--primary-color-light);
+  color: var(--foreground-color);
+}
+
+.filter__container {
+  gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 1rem;
+}
+
+.filter__container ::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+@media (max-width: 400px) {
+}
