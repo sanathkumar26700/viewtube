@@ -12,7 +12,7 @@ const DataContextProvider =({children}) =>{
     const [data, dataDispatch] =  useReducer(dataReducer,
         {   videoData : [],
             categoryData : [],
-            selectedCategory : '',
+            selectedCategory : 'All',
             isLoading: true,
             searchFor : ''
 })
