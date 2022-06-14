@@ -1,0 +1,49 @@
+.card__btn-fav {
+  border: none;
+}
+
+.in--wishlist {
+  color: var(--red--dark-color);
+}
+
+.card__product--quantity {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.btn {
+  display: inline;
+}
+
+.btn__disabled {
+  pointer-events: none;
+}
+
+.card.vertical {
+  overflow: hidden;
+}
+
+.card .card__product--img {
+  padding: 0;
+  position: relative;
+}
+
+.card .card__product--img img {
+  width: 100%;
+}
+
+.card__product--img .badge--text {
+  top: 14rem;
+  left: 25rem;
+}
+
+.card__product--content .card__product--category {
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.795);
+}
+
+.card .avatar__round {
+  width: 5rem;
+  float: left;
+  margin-right: 1rem;
+}
