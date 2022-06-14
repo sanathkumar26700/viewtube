@@ -2,6 +2,11 @@
   padding: 2rem 2rem 2rem 15rem;
 }
 
+.empty-list--text {
+  font-size: 400%;
+  text-align: center;
+}
+
 .list-bulletless {
   list-style: none;
 }

@@ -11,12 +11,19 @@ function Home() {
   const filteredData = filterBySearch(filteredCategoryData(videoData, selectedCategory), searchFor)
 
   return (
-    <section className="video-list--container main__body">
-      <Filter/>
-      <section className='video-list--section'>
-        {filteredData.map(video => <VideoCard video={video}/>)}
+    <>
+
+    {filteredData.length ?
+      <section className="video-list--container main__body">
+        <Filter/>
+        <section className='video-list--section'>
+          {filteredData.map(video => <VideoCard video={video}/>)}
+        </section>
       </section>
-    </section>
+    :
+    <h1 className='empty-list--text'>No related video are available for now 😕</h1>
+    }
+    </>
   )
 }
 
