@@ -21,6 +21,7 @@
 
 .card.vertical {
   overflow: hidden;
+  height: 31rem;
 }
 
 .card .card__product--img {
