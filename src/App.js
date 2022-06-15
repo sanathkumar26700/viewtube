@@ -1,43 +1,36 @@
 import "./App.css";
-import logo from "./logo.png";
+import Navbar from "./Components/Navbar/navbar";
+import Sidebar from "./Components/Sidebar/sidebar"
+import NavBarRoutes from "./Routes/navbar-routes";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import Footer from './Components/Footer/footer'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} alt="mockBee logo" width="180" height="180" />
-        <h1 className="brand-title">
-          Welcome to <span>mockBee!</span>
-        </h1>
-        <p className="brand-description">
-          Get started by editing <code>src/App.js</code>
-        </p>
-        <div className="links">
-          <a
-            href="https://mockbee.netlify.app/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Explore mockBee
-          </a>
-          <a
-            href="https://mockbee.netlify.app/docs/api/introduction"
-            target="_blank"
-            rel="noreferrer"
-          >
-            API Documentation
-          </a>
-          <a
-            href="https://github.com/neogcamp/mockBee"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Contribute
-          </a>
-        </div>
-      </header>
+    return ( 
+    <div className = "App" >
+        <main className = "main">
+            <Navbar/>
+            <section className = "main--content">
+                <Sidebar/>
+                <NavBarRoutes/>
+            </section>
+            <ToastContainer 
+                className="toastify"
+                position="bottom-right"
+                autoClose={2500}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                />
+        </main>
+        <Footer/>
     </div>
-  );
+    );
 }
 
 export default App;
