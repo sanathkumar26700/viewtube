@@ -8,12 +8,11 @@ import Loader from '../../Components/Loader/loader'
 
 function Home() {
   const {data:{videoData, selectedCategory, searchFor, isLoading}} = useDataContext()
-
+  document.title = 'Home | viewtube'
   const filteredData = filterBySearch(filteredCategoryData(videoData, selectedCategory), searchFor)
 
   return (
     <>
-
     {
       isLoading ?
         <Loader/>
