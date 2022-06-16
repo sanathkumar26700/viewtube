@@ -1,0 +1,41 @@
+.avatar__round {
+  width: 5rem;
+  float: left;
+  margin-right: 1rem;
+}
+
+.card__product--primary {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__product--content ul {
+  cursor: pointer;
+}
+
+.card__product--content .card__product--secondary p {
+  -webkit-line-clamp: 10;
+}
+
+.card__product--primary .card__product--title {
+  font-size: 3rem;
+}
+.card__product--primary .card__product--category {
+  font-size: 2rem;
+}
+
+.card__product--primary {
+  padding-bottom: 1rem;
+}
+
+.card__product--secondary {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--foreground-color);
+}
+
+.card__product--secondary .avatar__round {
+  width: 8rem;
+}
+.card__product--secondary .card__product--company {
+  font-size: 2rem;
+}
