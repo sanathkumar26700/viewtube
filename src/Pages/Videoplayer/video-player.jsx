@@ -12,7 +12,7 @@ function VideoPlayer() {
 
   const {data:{videoData}} = useDataContext()
   const {userData:{historyData},  userDataDispatch} = useUserData()
-  const {auth:{token, isAuthorized}} = useAuth()
+  const {auth:{token}} = useAuth()
   const videoRef = useRef()
   const {youtubeId} = useParams()
 
