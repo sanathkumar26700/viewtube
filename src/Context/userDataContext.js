@@ -6,7 +6,9 @@ const userDataContext = createContext()
 const UserDataContextProvider = ({children}) =>{
 
     const [userData, userDataDispatch] = useReducer(userDataReducer,{
-        historyData : []
+        historyData : [],
+        likedData : [],
+        watchLater : []
     })
     return(<userDataContext.Provider value={{userData, userDataDispatch}}>{children}</userDataContext.Provider>)
 }
