@@ -13,6 +13,16 @@
   cursor: pointer;
 }
 
+.card__product--content ul li button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-list--item__icon--wrapper .active--icon {
+  color: var(--primary-color);
+}
+
 .card__product--content .card__product--secondary p {
   -webkit-line-clamp: 10;
 }
