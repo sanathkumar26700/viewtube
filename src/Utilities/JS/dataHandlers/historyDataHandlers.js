@@ -12,18 +12,17 @@ const getHistoryData = async(token, userDataDispatch) => {
     }
 }
 
-const AddToHistoryData = async(video, token, userDataDispatch) => {
+const addToHistoryData = async(video, token, userDataDispatch) => {
     try{
         const response = await axios.post(
             "/api/user/history",
             { video },
             { headers: { authorization: token } })
-            console.log(response)
         if(response.status === 201){
             userDataDispatch({type : 'HISTORY_DATA', payload : response?.data?.history})
         }
     }catch(err) {
-        console.log(err)
+        // console.log(err)
     }
 }
 
@@ -32,13 +31,12 @@ const deleteFromHistoryData = async(video, token, userDataDispatch) => {
         const response = await axios.delete(
             `/api/user/history/${video._id}`,
             { headers: { authorization: token } })
-            console.log(response)
         if(response.status === 200){
             userDataDispatch({type : 'HISTORY_DATA', payload : response?.data?.history})
             toast.success('Video deleted from history 😉')
         }
     }catch(err) {
-        console.log(err)
+        toast.error('Oops, something went wrong!')
     }
 }
 
@@ -52,8 +50,8 @@ const deleteAllHistoryData = async(token, userDataDispatch) => {
             toast.success('Your history is cleared 😉')
         }
     }catch(err) {
-        console.log(err)
+        toast.error('Oops, something went wrong!')
     }
 }
 
-export {getHistoryData, AddToHistoryData, deleteFromHistoryData, deleteAllHistoryData}
+export {getHistoryData, addToHistoryData, deleteFromHistoryData, deleteAllHistoryData}
