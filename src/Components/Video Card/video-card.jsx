@@ -5,7 +5,7 @@ import './video-card.css'
 
 const VideoCard = ({ video }) => {
 
-    
+    const {title, thumbnailUrl, channelImg, views, videoLength, channelName, description, youtubeId } = video
   const navigate = useNavigate();
 
     const {auth:{isAuthorized}} = useAuth()
@@ -14,17 +14,17 @@ const VideoCard = ({ video }) => {
     return (
         		
         <div className="card vertical">
-            <div onClick={() => navigate(`/video/${video.youtubeId}`)}>
+            <div onClick={() => navigate(`/video/${youtubeId}`)}>
                 <div className="card__product--img">
-                    <img className="img" src={video.thumbnailUrl} alt="video thumbnail"/>
-                    <span className="badge--text badge--grey">{video.videoLength}</span>
+                    <img className="img" src={thumbnailUrl} alt="video thumbnail"/>
+                    <span className="badge--text badge--grey">{videoLength}</span>
                 </div>
                 <div className="card__product--content">
-                    <h2 className="card__product--title">{video.title}</h2>
-                    <span className="card__product--category">{video.views} views</span>
-                    <img className="avatar__round avatar--sm" src={video.channelImg} alt='channel logo'/>
-                    <h4 className="card__product--company">{video.channelName} </h4>
-                    <p className="card__product--description"> {video.description} </p>
+                    <h2 className="card__product--title">{title}</h2>
+                    <span className="card__product--category">{views} views</span>
+                    <img className="avatar__round avatar--sm" src={channelImg} alt='channel logo'/>
+                    <h4 className="card__product--company">{channelName} </h4>
+                    <p className="card__product--description"> {description} </p>
                 </div>
             </div>   												
             <i onClick={()=>{isAuthorized ? setShowActionCard(prev => !prev) : navigate('/login-page')}} 
