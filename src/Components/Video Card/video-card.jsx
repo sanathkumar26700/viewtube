@@ -1,15 +1,24 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {useAuth} from '../../Context/authContext'
+import { addToWatchLaterData, deleteFromWatchLaterData } from '../../Utilities/JS/dataHandlers/watchLaterDataHandlers'
+import {useUserData} from '../../Context/userDataContext'
 import './video-card.css'
 
 const VideoCard = ({ video }) => {
 
-    const {title, thumbnailUrl, channelImg, views, videoLength, channelName, description, youtubeId } = video
+    const {title, thumbnailUrl, channelImg, views, videoLength, channelName, description, youtubeId, _id } = video
   const navigate = useNavigate();
 
-    const {auth:{isAuthorized}} = useAuth()
+    const {auth:{token ,isAuthorized}} = useAuth()
+    const {userData:{watchLaterData}, userDataDispatch} = useUserData()
+
     const [showActionCard, setShowActionCard] = useState(false)
+    const [isInWatchLater, setIsInWatchLater] = useState(false)
+
+    useEffect(() =>{
+        watchLaterData.find((video) => video._id === _id) && setIsInWatchLater(true)
+    },[watchLaterData, _id]) 
 
     return (
         		
@@ -31,11 +40,18 @@ const VideoCard = ({ video }) => {
                 className="fas option--icon fa-ellipsis-v">
             </i>
             {showActionCard&&
-            <div className={`${showActionCard} action--card` }>
-                <div className="action--option"
-                    
+            <div className={`${showActionCard} action--card` }
+                onClick={()=>{ setShowActionCard(prev => !prev)}} >
+                <div className={`action--option ${isInWatchLater ? `active--option` : ''}`}
+                        onClick = {()=> { isInWatchLater ?
+                                        deleteFromWatchLaterData(video, token, userDataDispatch, setIsInWatchLater)
+                                      : 
+                                        addToWatchLaterData(video, token, userDataDispatch, setIsInWatchLater)}}
                 >
-                    <i className="fas fa-list"></i>
+                {isInWatchLater? 
+                    <i className="fas active--icon fa-list-alt"></i>
+                :
+                    <i className="fas fa-list"></i>}
                     Watch Later
                 </div>
                 <div className="action--option"><i className="far fa-folder"></i>Playlist</div>

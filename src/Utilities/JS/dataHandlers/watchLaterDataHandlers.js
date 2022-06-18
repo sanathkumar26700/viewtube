@@ -28,13 +28,14 @@ const addToWatchLaterData = async(video, token, userDataDispatch, setIsInWatchLa
     }
 }
 
-const deleteFromWatchLaterData = async(video, token, userDataDispatch) => {
+const deleteFromWatchLaterData = async(video, token, userDataDispatch, setIsInWatchLater) => {
     try{
         const response = await axios.delete(
             `/api/user/watchlater/${video._id}`,
             { headers: { authorization: token } })
         if(response.status === 200){
             userDataDispatch({type : 'WATCHLATER_DATA', payload : response?.data?.watchlater})
+            setIsInWatchLater(false)
             toast.success('Removed from your watch later list')
         }
     }catch(err) {
