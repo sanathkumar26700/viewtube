@@ -16,14 +16,18 @@ function NavBarRoutes() {
         <Route path = "/home" element={<Home/>}/>
         <Route path = "/login-page" element={<Login/>}/>
         <Route path = "/signup-page" element={<SignUp/>}/>
+        <Route path = "/video/:youtubeId" element={<VideoPlayer/>}/>
         <Route element = {<AuthorizedRoutes/>}>
             <Route path = "/likes" element={<Likes/>}/>
             <Route path = "/watch-later" element={<WatchLater/>}/>
             <Route path = "/playlist" element={<Playlist/>}/>
             <Route path = "/history" element={<History/>}/>
-            <Route path = "/video" element={<VideoPlayer/>}/>
         </Route>
-    </Routes>
+        <Route
+            path="*"
+            element={<p className="empty-list--text">Oops, You took the wrong path!</p>}
+            />
+        </Routes>
     );
 }
 

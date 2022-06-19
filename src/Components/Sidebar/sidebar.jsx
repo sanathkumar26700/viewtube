@@ -6,11 +6,12 @@ import '../../Utilities/CSS/Utilities.css'
 function Sidebar() {
 
     const location = useLocation()
-
+    const path = location.pathname
+    
     return (
         <aside className="sidebar--container ">
             <ul className="list-bulletless social-links side-shadow">
-                <li className={location.pathname === '/home' ? `active--tab` : ''}>
+                <li className={path === '/home' || path === '/' ? `active--tab` : ''}>
                     <NavLink to="/home" className='nav-list--item'>
                         <div className="nav-list--item__icon--wrapper">
                             <span>
@@ -20,7 +21,7 @@ function Sidebar() {
                         </div>
                     </NavLink>
                 </li>
-                <li className={location.pathname === '/likes' ? `active--tab` : ''}>
+                <li className={path === '/likes' ? `active--tab` : ''}>
                     <NavLink to="/likes" className='nav-list--item'>
                         <div className="nav-list--item__icon--wrapper">
                             <span>
@@ -30,7 +31,7 @@ function Sidebar() {
                         </div>
                     </NavLink>
                 </li>
-                <li className={location.pathname === '/history' ? `active--tab` : ''}>
+                <li className={path === '/history' ? `active--tab` : ''}>
                     <NavLink to="/history" className='nav-list--item'>
                         <div className="nav-list--item__icon--wrapper">
                             <span>
@@ -40,7 +41,7 @@ function Sidebar() {
                         </div>
                     </NavLink>
                 </li>
-                <li className={location.pathname === '/watch-later' ? `active--tab` : ''}>
+                <li className={path === '/watch-later' ? `active--tab` : ''}>
                     <NavLink to="/watch-later" className='nav-list--item'>
                         <div className="nav-list--item__icon--wrapper">
                             <span>
@@ -50,7 +51,7 @@ function Sidebar() {
                         </div>
                     </NavLink>
                 </li>
-                <li className={location.pathname === '/playlist' ? `active--tab` : ''}>
+                <li className={path === '/playlist' ? `active--tab` : ''}>
                     <NavLink to="/playlist" className='nav-list--item'>
                         <div className="nav-list--item__icon--wrapper">
                             <span>

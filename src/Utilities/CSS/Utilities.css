@@ -2,6 +2,14 @@
   padding: 2rem 2rem 2rem 15rem;
 }
 
+.page--title {
+  font-size: 3rem;
+}
+
+.page-clear--btn {
+  font-size: 1.5rem;
+}
+
 .empty-list--text {
   font-size: 400%;
   text-align: center;
