@@ -39,7 +39,7 @@ const deleteFromWatchLaterData = async(video, token, userDataDispatch, setIsInWa
             toast.success('Removed from your watch later list')
         }
     }catch(err) {
-        toast.error('Oops, something went wrong!')
+        console.log(err)
     }
 }
 
