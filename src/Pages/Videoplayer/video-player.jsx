@@ -91,7 +91,7 @@ function VideoPlayer() {
               </ul>}
             </div>
             <div className="card__product--secondary">
-              <img className="avatar__round avatar--sm" src={channelImg} alt='channel logo'/>
+              <img className="avatar__round avatar--sm" src={channelImg} alt={`${channelName}`}/>
               <h4 className="card__product--company">{channelName} </h4>
               <p className="card__product--description"> {description} </p>
             </div>

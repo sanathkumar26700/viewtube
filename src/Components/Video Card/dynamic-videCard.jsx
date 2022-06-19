@@ -18,7 +18,7 @@ const DynamicVideoCard = ({ video }) => {
         <div className="card dynamic vertical">
             <div onClick={() => navigate(`/video/${youtubeId}`)}>
                 <div className="card__product--img">
-                    <img className="img" src={thumbnailUrl} alt="video thumbnail"/>
+                    <img className="img" src={thumbnailUrl} alt={`${title} thumbnail`}/>
                     <span className="badge--text badge--grey">{videoLength}</span>
                 </div>
             </div>   
