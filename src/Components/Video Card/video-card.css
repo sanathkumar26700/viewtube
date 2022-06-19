@@ -71,6 +71,10 @@
   background-color: rgba(255, 166, 0, 0.214);
 }
 
+.active--option {
+  color: var(--primary-color);
+}
+
 .action--option i {
   margin-right: 1rem;
 }
@@ -87,7 +91,7 @@
 
 .card.dynamic .card__product--content i {
   padding: 0.75rem 0.75rem 0.5rem 2rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(---foreground-color);
   cursor: pointer;
 }
