@@ -1,10 +1,10 @@
+import Filter from '../../Components/Filter/filter'
+import VideoCard from '../../Components/Video Card/video-card'
+import Loader from '../../Components/Loader/loader'
+import {useDataContext} from '../../Context/dataContext'
+import { filteredCategoryData, filterBySearch } from '../../Utilities/JS/filterFunctions'
 import './home.css'
 import '../../Utilities/CSS/Utilities.css'
-import Filter from '../../Components/Filter/filter'
-import {useDataContext} from '../../Context/dataContext'
-import VideoCard from '../../Components/Video Card/video-card'
-import { filteredCategoryData, filterBySearch } from '../../Utilities/JS/filterFunctions'
-import Loader from '../../Components/Loader/loader'
 
 function Home() {
   const {data:{videoData, selectedCategory, searchFor, isLoading}} = useDataContext()
