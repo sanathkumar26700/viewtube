@@ -1,0 +1,52 @@
+.playlist--section {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.playlist--modal {
+  background-color: var(--background-color);
+  color: var(--foreground-color);
+  height: fit-content;
+  width: fit-content;
+  min-height: 20rem;
+  padding: 2rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.playlist-modal__title-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--foreground-color);
+  padding-bottom: 0.5rem;
+}
+
+.playlist-modal__title {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.playlist-modal__close--btn {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--foreground-color);
+  cursor: pointer;
+}
+
+.playlist--modal .btn i {
+  margin-right: 1rem;
+}
