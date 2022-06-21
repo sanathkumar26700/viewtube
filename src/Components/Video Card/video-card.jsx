@@ -62,7 +62,7 @@ const VideoCard = ({ video }) => {
                     </div>
                 </div>}
             </div>
-            <PlaylistModal showModal={showModal} setShowModal={setShowModal}/>
+            <PlaylistModal showModal={showModal} setShowModal={setShowModal} video={video}/>
         </>	
     )
 }
