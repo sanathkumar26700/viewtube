@@ -50,8 +50,8 @@ function Sidebar() {
                         </div>
                     </NavLink>
                 </li>
-                <li className={pathname === '/playlist' ? `active--tab` : ''}>
-                    <NavLink to="/playlist" className='nav-list--item'>
+                <li className={pathname === '/playlists' ? `active--tab` : ''}>
+                    <NavLink to="/playlists" className='nav-list--item'>
                         <div className="nav-list--item__icon--wrapper">
                             <span>
                                 <i className="far icon fa-folder"></i>

@@ -12,6 +12,7 @@ function Filter() {
                     <button 
                         className= {`category--input ${selectedCategory === category.categoryName ? `active` : ``}`}
                         id={category._id}
+                        key={category._id}
                         onClick = {(e) =>  dataDispatch({type : "SORT_BY_CATEGORY" , payload : category.categoryName})}
                     >
                         {category.categoryName}

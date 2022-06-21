@@ -7,6 +7,7 @@ import { addToHistoryData } from '../../Utilities/JS/dataHandlers/historyDataHan
 import { addToLikedData, deleteFromLikedData } from '../../Utilities/JS/dataHandlers/likedDataHandlers'
 import { addToWatchLaterData, deleteFromWatchLaterData } from '../../Utilities/JS/dataHandlers/watchLaterDataHandlers'
 import ReactPlayer from "react-player/youtube";
+import PlaylistModal from '../../Components/Playlist modal/playlist-modal';
 import '../../Utilities/CSS/Utilities.css'
 import './video-player.css'
 
@@ -14,6 +15,7 @@ function VideoPlayer() {
 
   const [isLiked, setIsLiked] = useState(false)
   const [isInWatchLater, setIsInWatchLater] = useState(false)
+  const [viewModal, setViewModal] = useState(false)
   const {data:{videoData}} = useDataContext()
   const {userData:{likedData, watchLaterData},  userDataDispatch} = useUserData()
   const {auth:{token, isAuthorized}} = useAuth()
@@ -81,7 +83,8 @@ function VideoPlayer() {
                   </div>
                 </li>
                 <li className='nav-list--item' >
-                        <div className="nav-list--item__icon--wrapper">
+                        <div className="nav-list--item__icon--wrapper"
+                              onClick={() => setViewModal(prev => !prev)}>
                             <button>
                                 <i className="far icon fa-folder"></i>
                             </button>
@@ -97,7 +100,8 @@ function VideoPlayer() {
             </div>
           </div> 
         </div>
-          </section>
+        <PlaylistModal setViewModal={setViewModal} viewModal ={viewModal} video={video}/>
+      </section>
   )
 }
 

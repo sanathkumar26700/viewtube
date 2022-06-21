@@ -22,7 +22,7 @@ function Home() {
           <section className="video-list--container main__body">
             <Filter/>
             <section className='video-list--section'>
-              {filteredData.map(video => <VideoCard video={video}/>)}
+              {filteredData.map(video => <VideoCard key={video._id} video={video}/>)}
             </section>
           </section>
         :
