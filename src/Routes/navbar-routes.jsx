@@ -2,7 +2,8 @@ import {Routes, Route} from "react-router-dom";
 import Home from "../Pages/Home/home";
 import Likes from "../Pages/Likes/likes";
 import WatchLater from "../Pages/WatchLater/watch-later"
-import Playlist from "../Pages/Playlist/playlist"
+import Playlists from "../Pages/Playlists/playlists"
+import SinglePlaylist from "../Pages/Single Playlist/single-playlist"
 import History from "../Pages/History/history"
 import VideoPlayer from "../Pages/Videoplayer/video-player"
 import Login from "../Pages/Authentication/login-page";
@@ -20,8 +21,9 @@ function NavBarRoutes() {
         <Route element = {<AuthorizedRoutes/>}>
             <Route path = "/likes" element={<Likes/>}/>
             <Route path = "/watch-later" element={<WatchLater/>}/>
-            <Route path = "/playlist" element={<Playlist/>}/>
+            <Route path = "/playlists" element={<Playlists/>}/>
             <Route path = "/history" element={<History/>}/>
+            <Route path = "/playlist/:playlistId" element={<SinglePlaylist/>}/>
         </Route>
         <Route
             path="*"

@@ -95,3 +95,19 @@
   color: var(---foreground-color);
   cursor: pointer;
 }
+
+.playlist-count--text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  font-size: 5rem;
+  background-color: rgba(0, 0, 0, 0.704);
+  border-top-right-radius: 1.5rem;
+  color: rgb(211, 211, 211);
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,6 +1,6 @@
 import {useAuth} from '../../Context/authContext'
 import {useUserData} from '../../Context/userDataContext'
-import DynamicVideoCard from '../../Components/Video Card/dynamic-videCard'
+import DynamicVideoCard from '../../Components/Video Card/dynamic-videoCard'
 import {deleteAllHistoryData} from '../../Utilities/JS/dataHandlers/historyDataHandlers'
 import '../../Utilities/CSS/Utilities.css'
 
