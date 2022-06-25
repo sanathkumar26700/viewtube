@@ -51,7 +51,7 @@ function VideoPlayer() {
                 <span className="card__product--category">{views} views</span>
               </div>
               {isAuthorized &&
-              <ul className="list-bulletless social-links side-shadow">
+              <ul className="list-bulletless social-links">
                 <li onClick = {()=> { isLiked ?
                                         deleteFromLikedData(video, token, userDataDispatch, setIsLiked)
                                       : 
